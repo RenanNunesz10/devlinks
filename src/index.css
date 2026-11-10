@@ -43,6 +43,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dark body {
+  background-image: radial-gradient(ellipse at top, #3b1d6e 0%, #101010 60%);
+  background-attachment: fixed;
+}
+
 /* Foco visível para acessibilidade */
 *:focus-visible {
   outline: 2px solid var(--color-accent);
