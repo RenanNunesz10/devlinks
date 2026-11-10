@@ -5,28 +5,28 @@
 
 /* Tokens de cor base (tema claro) */
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #1f2937;
-  --color-muted: #6b7280;
-  --color-surface: #f3f4f6;
+  --color-background: #f3f4f6;
+  --color-foreground: #303040;
+  --color-muted: #909090;
+  --color-surface: #ffffff;
   --color-surface-hover: #e5e7eb;
-  --color-border: #e5e7eb;
-  --color-accent: #7c3aed;
-  --color-accent-hover: #6d28d9;
+  --color-border: #d1d5db;
+  --color-accent: #8b5cf6;
+  --color-accent-hover: #7c3aed;
   --color-accent-foreground: #ffffff;
 }
 
 /* Sobrescrita para tema escuro */
 .dark {
-  --color-background: #0f172a;
-  --color-foreground: #f9fafb;
-  --color-muted: #9ca3af;
-  --color-surface: #1e293b;
-  --color-surface-hover: #334155;
-  --color-border: #334155;
+  --color-background: #101010;
+  --color-foreground: #f0f0f0;
+  --color-muted: #a0a0a0;
+  --color-surface: #2a2a3a;
+  --color-surface-hover: #3a3a4a;
+  --color-border: #404040;
   --color-accent: #a78bfa;
   --color-accent-hover: #c4b5fd;
-  --color-accent-foreground: #0f172a;
+  --color-accent-foreground: #101010;
 }
 
 html {
