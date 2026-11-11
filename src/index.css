@@ -44,7 +44,7 @@ body {
 }
 
 .dark body {
-  background-image: radial-gradient(ellipse at top, #3b1d6e 0%, #101010 60%);
+  background-image: radial-gradient(circle at top right, #6d28d9 0%, #101010 60%);
   background-attachment: fixed;
 }
 
