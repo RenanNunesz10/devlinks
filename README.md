@@ -1,75 +1,44 @@
-# React + TypeScript + Vite
+# DevLinks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Página de links pessoal em React + Vite + TypeScript, reproduzindo o design do Figma nos modos claro e escuro, em desktop e mobile.
 
-Currently, two official plugins are available:
+**Autor:** Renan Nunes · [GitHub](https://github.com/RenanNunesz10)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Como instalar e executar
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Abra `http://localhost:5173/`. Para gerar a versão de produção: `npm run build`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Tecnologias
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React 19 + Vite
+- TypeScript
+- Tailwind CSS v4 (via `@tailwindcss/vite`) para estilização, com variáveis CSS para os temas claro e escuro
+- localStorage para salvar o tema
+- Phosphor Icons para os ícones das redes sociais e do botão de tema
 
-```
+## Personalização
+
+- Nome, usuário e fotos do perfil: `src/data/profile.ts`
+- Botões de link: `src/data/links.ts`
+- Redes sociais: `src/data/socials.ts`
+
+A foto do perfil muda conforme o tema: com óculos no tema claro e sem óculos no escuro (arquivos em `src/assets`).
+
+## Prints
+
+| Desktop — Claro | Desktop — Escuro |
+| :---: | :---: |
+| ![Desktop claro](docs/prints/desktop-claro.png) | ![Desktop escuro](docs/prints/desktop-escuro.png) |
+
+| Mobile — Claro | Mobile — Escuro |
+| :---: | :---: |
+| ![Mobile claro](docs/prints/mobile-claro.png) | ![Mobile escuro](docs/prints/mobile-escuro.png) |
+
+## Documentação
+
+- [`AGENTS.md`](AGENTS.md): instruções para o agente de IA
