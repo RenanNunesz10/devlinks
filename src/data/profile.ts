@@ -3,9 +3,9 @@ import avatarDark from '../assets/avatar-sem-oculos.jpg';
 import type { ProfileData } from '../types';
 
 export const profile: ProfileData = {
-  name: 'Seu Nome',
-  username: '@seunome',
+  name: 'Renan Nunes',
+  username: '@renan.nunesz',
   avatarLightUrl: avatarLight,
   avatarDarkUrl: avatarDark,
-  avatarAlt: 'Foto de perfil de Seu Nome',
+  avatarAlt: 'Foto de perfil de Renan Nunes',
 };

@@ -12,12 +12,25 @@ export function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
   return (
     <button
       type="button"
+      role="switch"
       onClick={onToggle}
-      aria-label={isDark ? 'Ativar tema claro' : 'Ativar tema escuro'}
-      aria-pressed={isDark}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface text-foreground transition-colors hover:bg-surface-hover focus-visible:outline-none"
+      aria-label="Tema escuro"
+      aria-checked={isDark}
+      className="relative inline-flex h-9 w-[4.5rem] shrink-0 items-center justify-between rounded-full border border-border bg-surface px-2 text-muted shadow-sm transition-colors hover:bg-surface-hover"
     >
-      {isDark ? <Sun size={20} weight="fill" /> : <Moon size={20} weight="fill" />}
+      {/* Ícones fixos no trilho: sol à esquerda, lua à direita */}
+      <Sun size={16} weight="fill" aria-hidden="true" />
+      <Moon size={16} weight="fill" aria-hidden="true" />
+
+      {/* Bolinha que desliza para o lado do tema ativo */}
+      <span
+        aria-hidden="true"
+        className={`absolute top-1/2 left-[3px] flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-md transition-transform duration-300 ease-out motion-reduce:transition-none ${
+          isDark ? 'translate-x-9' : 'translate-x-0'
+        }`}
+      >
+        {isDark ? <Moon size={16} weight="fill" /> : <Sun size={16} weight="fill" />}
+      </span>
     </button>
   );
 }

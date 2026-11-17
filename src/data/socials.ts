@@ -1,9 +1,7 @@
 import type { SocialItem } from '../types';
 
 export const socials: SocialItem[] = [
-  { id: 'gh', label: 'GitHub', url: 'https://github.com', icon: 'github' },
-  { id: 'li', label: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
-  { id: 'ig', label: 'Instagram', url: 'https://instagram.com', icon: 'instagram' },
-  { id: 'tw', label: 'Twitter / X', url: 'https://twitter.com', icon: 'twitter' },
-  { id: 'yt', label: 'YouTube', url: 'https://youtube.com', icon: 'youtube' },
+  { id: 'gh', label: 'GitHub', url: 'https://github.com/RenanNunesz10', icon: 'github' },
+  { id: 'li', label: 'LinkedIn', url: 'https://www.linkedin.com/in/renan-nunes-1abb41231/', icon: 'linkedin' },
+  { id: 'ig', label: 'Instagram', url: 'https://www.instagram.com/renan.nunesz', icon: 'instagram' },
 ];
