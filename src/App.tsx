@@ -36,7 +36,7 @@ function App() {
         <ThemeToggle theme={theme} onToggle={handleToggle} />
       </div>
 
-      <Profile profile={profile} />
+      <Profile profile={profile} theme={theme} />
 
       <section className="flex w-full flex-col gap-3" aria-label="Links">
         {links.map((link) => (

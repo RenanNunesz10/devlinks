@@ -3,7 +3,10 @@ export type Theme = 'light' | 'dark';
 export interface ProfileData {
   name: string;
   username: string;
-  avatarUrl: string;
+  /** Foto exibida no tema claro */
+  avatarLightUrl: string;
+  /** Foto exibida no tema escuro */
+  avatarDarkUrl: string;
   avatarAlt: string;
 }
 

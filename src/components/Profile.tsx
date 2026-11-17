@@ -1,14 +1,18 @@
-import type { ProfileData } from '../types';
+import type { ProfileData, Theme } from '../types';
 
 interface ProfileProps {
   profile: ProfileData;
+  theme: Theme;
 }
 
-export function Profile({ profile }: ProfileProps) {
+export function Profile({ profile, theme }: ProfileProps) {
+  // Escolhe a foto de acordo com o tema atual
+  const avatarUrl = theme === 'light' ? profile.avatarLightUrl : profile.avatarDarkUrl;
+
   return (
     <header className="flex flex-col items-center gap-3 text-center">
       <img
-        src={profile.avatarUrl}
+        src={avatarUrl}
         alt={profile.avatarAlt}
         width={96}
         height={96}
